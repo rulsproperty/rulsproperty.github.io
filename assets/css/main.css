@@ -992,7 +992,6 @@ h6 {
 }
 
 .services .service-item i {
-	background: var(--color-primary);
 	color: var(--color-background);
 	font-size: 24px;
 	transition: 0.3s;
@@ -1676,6 +1675,7 @@ h6 {
 
 .img-hello {
 	border-radius: 20px;
+	height: 100%;
 }
 
 .fs-icon-lg {
