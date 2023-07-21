@@ -205,3 +205,39 @@ monteverdeElement.addEventListener("click", function () {
 	monteverdeUnitElement.innerHTML = initialContent;
 	terraverdeUnitElement.innerHTML = "";
 });
+
+// Get the elements with the "Terraverde" and "Monteverde" classes
+var twoBedElement = document.querySelector(".2-bed");
+var threeBedElement = document.querySelector(".3-bed");
+
+// Get the 3-bedUnitElement
+var twoBedUnitElement = document.querySelector(".3-bed-unit");
+var threeBedUnitElement = document.querySelector(".2-bed-unit");
+
+// Store the initial content of twoBedUnitElement
+var initialContent = twoBedUnitElement.innerHTML;
+var initialContentTerra = threeBedUnitElement.innerHTML;
+
+// Add click event listeners to the twoBedElement
+twoBedElement.addEventListener("click", function () {
+	// Update the content of twoBedUnitElement to display "twoBed"
+	// Remove the "active" class from the threeBedElement
+	threeBedElement.classList.remove("active");
+	// Add the "active" class to the twoBedElement
+	twoBedElement.classList.add("active");
+	threeBedUnitElement.style.display = "block";
+
+	threeBedUnitElement.innerHTML = initialContentTerra;
+	twoBedUnitElement.innerHTML = "";
+});
+
+// Add click event listeners to the threeBedElement
+threeBedElement.addEventListener("click", function () {
+	// Remove the "active" class from the terraverdeElement
+	terraverdeElement.classList.remove("active");
+	// Add the "active" class to the threeBedElement
+	threeBedElement.classList.add("active");
+	// Restore the initial content of twoBedUnitElement
+	twoBedUnitElement.innerHTML = initialContent;
+	threeBedUnitElement.innerHTML = "";
+});
